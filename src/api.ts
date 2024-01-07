@@ -1,6 +1,14 @@
 import { sanitizeUrl } from '@braintree/sanitize-url'
 
-export function vSafeUrl(el: any, binding: any) {
+interface BindingOptions {
+  value: string
+  oldValue?: string
+  arg?: string
+  modifiers?: { [modifier: string]: boolean }
+  instance: any
+}
+
+export function vSafeUrl(el: HTMLElement, binding: BindingOptions) {
   el.setAttribute('href', sanitizeUrl(binding.value))
 }
 
