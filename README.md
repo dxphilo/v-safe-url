@@ -4,9 +4,9 @@ Secure URL Sanitization for Vue.js Applications
 
 ## Why
 
-I built this to help with safe URL sanitization in VueJs application.
+I built this to help with safe URL sanitization in VueJs application. Under the hood, we levarage [sanitize-url](https://github.com/braintree/sanitize-url)
 
-**Note:** The plugin has a compact size of 1.59 kB, and you can also check its details on [bundlephobia](https://bundlephobia.com/).
+**Note:** The plugin has a bundle size of 1.59 kB, and you can also check its details on [bundlephobia](https://bundlephobia.com/package/v-safe-url).
 
 ## Installation
 
