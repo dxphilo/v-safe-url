@@ -1,6 +1,9 @@
 import { useSafeUrl, vSafeUrl } from './api'
 
-function VueSafeUrl(app: any) {
-  app.directive('v-safe-url', vSafeUrl)
+function install(app: any, _options = {}) {
+  app.directive('safe-url', vSafeUrl)
 }
-export { VueSafeUrl, useSafeUrl, vSafeUrl }
+export default {
+  install,
+}
+export { useSafeUrl }
