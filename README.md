@@ -43,7 +43,7 @@ In your Vue.js app entry file (main.ts or main.js), include the following:
 
 Apply the `v-safe-url` directive in your `a` link HTML tags to securely sanitize URLs.
 
-**Note:** The directive shoudl be used on `<a>` tags since it will inject the `href` attribute. If you need to use `safeUrl` in non-links, I suggest you check out the [useSafeUrl](## useSafeUrl)
+**Note:** The directive shoudl be used on `<a>` tags since it will inject the `href` attribute. If you need to use `usesafeUrl` in non-links, I suggest you check out the [useSafeUrl](#usesafeurl)
 
 ```
 <script setup>
@@ -62,7 +62,7 @@ const untrustedUrl = ref('www.example.com/\u200D\u0000\u001F\x00\x1F\uFEFFfoo');
 
 ## useSafeUrl
 
-Alternatively, if you prefer to sanitize the URL within the `<script>` tag, `import { useSafeUrl } from 'v-safe-url'`
+Alternatively, if you prefer to sanitize the URL within the `<script>` tag, import `useSafeUrl` from `v-safe-url`.
 
 ```
 <script setup>
@@ -82,7 +82,7 @@ const safeUrl = useSafeUrl(uncleanUrl.value);
 
 ```
 
-### If you encounter any issues, find a bug, wish to request a new feature, or propose general refactoring, please open an issue for discussion. Your feedback is valuable, and I appreciate your contributions. I hope this helps!
+If you encounter any issues, find a bug, wish to request a new feature, or propose general refactoring, please open an issue for discussion. Your feedback is valuable, and I appreciate your contributions. I hope this helps!
 
 ## License
 
