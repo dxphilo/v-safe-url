@@ -1,7 +1,7 @@
 {
-  "name": "v-safe-url",
+  "name": "usesafeurl",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "packageManager": "pnpm@8.12.1",
   "description": "Secure urls in vuejs",
   "author": "John Philip <philo7029@gmail.com>",
