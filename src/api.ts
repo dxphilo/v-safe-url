@@ -1,18 +1,14 @@
 import { sanitizeUrl } from '@braintree/sanitize-url'
+import type { Directive, DirectiveBinding } from 'vue'
 
-interface BindingOptions {
-  value: string
-  oldValue?: string
-  arg?: string
-  modifiers?: { [modifier: string]: boolean }
-  instance: any
+function sanitiZer(url: string): string {
+  return sanitizeUrl(url)
 }
 
-export function vSafeUrl(el: HTMLElement, binding: BindingOptions) {
-  el.setAttribute('href', sanitizeUrl(binding.value))
+export const vSafeUrl: Directive<HTMLElement, string> = (el: HTMLElement, binding: DirectiveBinding) => {
+  el.setAttribute('href', sanitiZer(binding.value))
 }
 
 export function useSafeUrl(url: string): string {
-  const sanitizedUrl = sanitizeUrl(url)
-  return sanitizedUrl
+  return sanitiZer(url)
 }
